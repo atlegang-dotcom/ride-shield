@@ -1,0 +1,69 @@
+Application Flow
+
+Note: The paths will be the api endpoints, where the data will be sent for processing each time on submit
+
+0. User login and register:
+  - path = /auth/login & /auth/register
+  - function flow(login):
+    - user will access the login page with form fields:
+      - username
+      - password
+    - on submit return success, welcome user / error, something happened (error message)
+  - function flow(register):
+    - user will access the register page with form fields:
+      - username
+      - email
+      - name
+      - password
+    - on submit return success, link or button to login / error, something happened (error message)
+
+1. User add driver details:
+  - path = /add/driver
+  - function flow:
+    - user logins or creates an account
+    - user adds driver details:
+      - name and surname
+      - car (model, brand and color)
+      - reason for flaggin
+      - proof
+    - return success, driver flagged successfully / error, something happened (error message)
+
+2. User look up driver:
+  - path = /search/driver
+  - function flow:
+    - user searches via one of the following keywords:
+      - name and surname
+      - number plate
+      - car (model, brand and color)
+    - return driver details / error, something happened (error message)
+
+3. User edit driver details:
+  - path = /select/driver & /edit/driver 
+  - function flow:
+    - user logins or creates account
+    - user navigates to select driver form page
+    - return a form with an ID input field
+      - call the get drivers function
+      - create the form input field using the select html tag, pupulate the driver data, just the name and id
+    - after choosing an id it should:
+      - get the driver details via the id
+      - on success of driver retrieval, return another form page with the driver details populated in the relevant input fields of the driver details
+    - the user will be able change wherever they see fit and then submit
+    - submit call data to edit driver function, the data/json payload and json request body will be the parameters
+    - return success, driver details updated / error, something happened (error message)
+
+4. User gets all drivers in the system:
+  - path = /drivers
+  - function flow:
+    - after user accesses page it should return all drivers in the database
+
+5. Driver file complaint or misinformation:
+  - path = /file/complaint
+  - functions flow:
+    - user logins or creates account
+    - after accessing page user will find a form with an input field for:
+      - email
+      - name
+      - message
+    - on submit it will send an email to one of our email accounts
+    - return success, complaint filed, will get back to you soon / error, something happened (error message)

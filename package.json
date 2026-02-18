@@ -1,0 +1,11 @@
+{
+  "name": "ride-shield",
+  "version": "1.0.0",
+  "description": "A web app to store potential predators who use ride sharing applications to find victims, the purpose of the app is to have a ready made database that users can use to check if the driver of the ride trip they request is not a potential predator.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "author": "Atlegang Phoenix Mbatha, Thobeka",
+  "license": "ISC"
+}
