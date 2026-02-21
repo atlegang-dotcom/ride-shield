@@ -6,6 +6,6 @@
   "scripts": {
     "test": "node index.js"
   },
-  "author": "Atlegang Phoenix Mbatha, Thobeka",
+  "author": "Atlegang Phoenix Mbatha & Thobeka Nkosi",
   "license": "ISC"
 }
